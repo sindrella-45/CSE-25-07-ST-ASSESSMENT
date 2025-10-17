@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Login</h2>
+
+    <form method="POST" action="" style="max-width: 350px; margin: 0 auto;">
+        {% csrf_token %}
+
+        <div style="margin-bottom: 10px;">
+            <label for="identifier">Email or Phone Number</label><br>
+            <input type="text" id="identifier" name="identifier" placeholder="Enter email or phone number" required style="width:100%; padding:8px;">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required style="width:100%; padding:8px;">
+        </div>
+
+        <div>
+            <button type="submit" style="width:100%; padding:10px; background-color:#009999; color:white; border:none; cursor:pointer;">
+                LOGIN
+            </button>
+        </div>
+
+        <p style="text-align:center; margin-top:10px;">
+            Don’t have an account? 
+            <a href="{% url 'signup' %}">Signup</a>
+        </p>
+    </form>
+
+</body>
+</html>
+  
+</body>
+</html>
