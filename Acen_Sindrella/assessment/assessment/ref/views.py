@@ -5,7 +5,7 @@ from django.contrib.auth.hashers import check_password
 from .models import Account
 from .forms import LoginForm
 
-def login_view(request):
+def login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
